@@ -1,7 +1,9 @@
+############################# SECT 3 ###########################################
+################################################################################
 ##########################LASSO ANALYSIS########################################
 ################################################################################
 
-# LASSO Code taken from Section 1 (Instructor Provided Code), adapted to our project results.
+# Code taken from Section 1, adapted to our project results.
 
 #Load data set, and values
 rm(list=ls())
@@ -30,17 +32,17 @@ x13 <- trails_osm_kms_100s
 x14 <- nearroad_kms
 
 #Use transformed variables
-x1dummy = as.integer(x1 > 0)
-x2dummy = as.integer(x2 > 0)
-x3dummy = as.integer(x3 > 0)
+x1dummy <- as.integer(x1 > 0)
+x2dummy <- as.integer(x2 > 0)
+x3dummy <- as.integer(x3 > 0)
 x4sqrt = sqrt(x4)
-x5dummy = as.integer(x5 > 0)
+x5dummy <- as.integer(x5 > 0)
 x6dummy = as.integer(x6 > 0)
 x7dummy = as.integer(x7 > 0)
 x8 # no transformation was foudn to be needed
 x9dummy = as.integer(x9 > 0.2598)
 cubertx10 = x10^(1/3)
-x11dummy = as.integer(x11 > 0)
+x11dummy <- as.integer(x11 > 0)
 x12dummy = as.integer(x12 > 0)
 x13dummy = as.integer(x13 > 0)
 x14dummy = as.integer(x14 > 0)
@@ -228,3 +230,4 @@ plot(model2, which = 5)
 # 2) As seen from the Residuals vs fitted plot (with Cook's Distance), we can investigate observations #748, #749, 610
 #       as they have a much larger Cook's Distance than the other observations
 # 3) Check for multicollinearity with VIF
+
